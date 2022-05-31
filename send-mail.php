@@ -6,10 +6,10 @@
 	$to = 'info@alejandroramirezjimenez.com';
 	
 	// contact form fields
-	$name = trim( $_POST['Nombre'] );
+	$name = trim( $_POST['name'] );
 	$email = trim( $_POST['email'] );
-	$subject = trim( $_POST['Asunto'] );
-	$message = trim( $_POST['Mensaje'] );
+	$subject = trim( $_POST['subject'] );
+	$message = trim( $_POST['message'] );
 	
 	// check for error
 	$error = false;
