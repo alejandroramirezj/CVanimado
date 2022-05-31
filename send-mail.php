@@ -1,15 +1,15 @@
 <?php
 
 	// site owner
-	$site_name = 'ikonik HTML5 Template';
-	$sender_domain = 'server@your-domain.com';
-	$to = 'jonhdoeeee@jonhdoe.com';
+	$site_name = 'Alejandro Ramírez';
+	$sender_domain = 'info@alejandroramirezjimenez.com';
+	$to = 'info@alejandroramirezjimenez.com';
 	
 	// contact form fields
-	$name = trim( $_POST['name'] );
+	$name = trim( $_POST['Nombre'] );
 	$email = trim( $_POST['email'] );
-	$subject = trim( $_POST['subject'] );
-	$message = trim( $_POST['message'] );
+	$subject = trim( $_POST['Asunto'] );
+	$message = trim( $_POST['Mensaje'] );
 	
 	// check for error
 	$error = false;
@@ -47,7 +47,7 @@
 	}
 	else // BOT DETECTED - lets lie to it 
 	{
-		//echo "Thanks, We'll get back to you as soon as possible";
+		//echo "Gracias, pronto me pondré en contacto contigo";
 		echo 'success';
 	}
 	
