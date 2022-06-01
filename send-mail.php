@@ -1,7 +1,7 @@
 <?php
 
 	// site owner
-	$site_name = 'Alejandro Ramírez';
+	$site_name = 'Correo de la página WEB';
 	$sender_domain = 'postmaster@alejandroramirezjimenez.com';
 	$to = 'info@alejandroramirezjimenez.com';
 	
@@ -47,7 +47,7 @@
 	}
 	else // BOT DETECTED - lets lie to it 
 	{
-		//echo "Gracias, pronto me pondré en contacto contigo";
+		//echo "Thanks, We'll get back to you as soon as possible";
 		echo 'success';
 	}
 	
