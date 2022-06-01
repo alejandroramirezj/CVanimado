@@ -2,7 +2,7 @@
 
 	// site owner
 	$site_name = 'Correo de la página WEB';
-	$sender_domain = 'smtp.gmail.com';
+	$sender_domain = 'postmaster@alejandroramirezjimenez.com';
 	$to = 'info@alejandroramirezjimenez.com';
 	
 	// contact form fields
