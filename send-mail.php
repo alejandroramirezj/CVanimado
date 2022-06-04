@@ -2,7 +2,7 @@
 
 	// site owner
 	$site_name = 'Correo de la página WEB';
-	$sender_domain = 'postmaster@alejandroramirezjimenez.com';
+	$sender_domain = 'fred.ns.cloudflare.com';
 	$to = 'info@alejandroramirezjimenez.com';
 	
 	// contact form fields
