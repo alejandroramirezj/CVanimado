@@ -18,6 +18,7 @@
   var userClickedAutoplayDialog = false;
   var homeLoaded = false;
   var autoplay = false;
+  var initialized = false;
 
   /* DOCUMENT LOAD */
   $(function () {
@@ -224,7 +225,7 @@
 
     // ------------------------------
     // SETUP
-    setup();
+    // setup();
     // ------------------------------
 
 
@@ -295,9 +296,31 @@
   // ------------------------------
 
 
+  function banner() {
+
+    console.error("Error: Todavia no me has contactado. Por favor, contacta conmigo.");
+    console.error("alejandroramirezj95@gmail.com")
+    setTimeout(() => banner(), 60000)
+
+  }
+
   // ------------------------------
   // SETUP : plugins
   function setup() {
+
+
+    if (initialized) return;
+    initialized = true;
+    // console.log("setup");
+    console.log({
+      msg: "Ey! Qué miras?",
+      "to-do": "Por que no te dejas de rodeos y me contactas?",
+      contact: "alejandroramirezj95@gmail.com"
+    });
+
+    banner()
+    // setTimeout(() => banner(), 60000)
+    // console.error("Error: Todavia no me has contactado. Por favor, contacta conmigo.");
 
     // COOL LINKS
     coolLinks();
@@ -328,6 +351,7 @@
 
     // FLUID MEDIA
     fluidMedia();
+
 
   }
   // ------------------------------
@@ -880,40 +904,46 @@
   function toggles() {
     if ($(".toggle").length) {
       var toggleSpeed = 300;
+      $(".toggle h4 + .toggle-content").hide();
       $(".toggle h4.active + .toggle-content").show();
 
       $(".toggle h4").on("click", function () {
+
         if ($(this).hasClass("active")) {
+
           $(this).removeClass("active");
+
           $(this)
             .next(".toggle-content")
-            .stop(true, true)
+            // .stop(true, true)
             .slideUp(toggleSpeed);
+
         } else {
+
           $(this).addClass("active");
           $(this)
             .next(".toggle-content")
-            .stop(true, true)
+            // .stop(true, true)
             .slideDown(toggleSpeed);
 
           //accordion
-          if (
-            $(this)
-              .parents(".toggle-group")
-              .hasClass("accordion")
-          ) {
-            $(this)
-              .parent()
-              .siblings()
-              .find("h4")
-              .removeClass("active");
-            $(this)
-              .parent()
-              .siblings()
-              .find(".toggle-content")
-              .stop(true, true)
-              .slideUp(toggleSpeed);
-          }
+          // if (
+          //   $(this)
+          //     .parents(".toggle-group")
+          //     .hasClass("accordion")
+          // ) {
+          //   $(this)
+          //     .parent()
+          //     .siblings()
+          //     .find("h4")
+          //     .removeClass("active");
+          //   $(this)
+          //     .parent()
+          //     .siblings()
+          //     .find(".toggle-content")
+          //     .stop(true, true)
+          //     .slideUp(toggleSpeed);
+          // }
         }
         return false;
       });
@@ -1039,7 +1069,7 @@
         $("html").addClass("p-overlay-on");
 
         // setup plugins
-        setup();
+        // setup();
 
         $("html").addClass("p-animating");
 
@@ -1168,6 +1198,7 @@
   // SHOW PAGE
   function showPage(url) {
     // start layers animation
+    // console.log("showPage");
     overlay_1.css("transition-delay", ".0s").css("transform", "translateY(0%)");
     overlay_2.css("transition-delay", ".2s").css("transform", "translateY(0%)");
 
